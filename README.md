@@ -8,7 +8,7 @@ This project deals with data processing with vector database. The main goal is t
 cargo new vector-database
 ```
 2. Add the required dependencies to `Cargo.toml` file.
-3. For the vector database, I plan to use [Qdrant](https://qdrant.tech/documentation/quick-start/).
+3. For the vector database, I use [Qdrant](https://qdrant.tech/documentation/quick-start/).
 - Download the latest Qdrant image from Dockerhub:
 ```bash
 docker pull qdrant/qdrant
@@ -47,7 +47,7 @@ let search_result = client.search_points(&SearchPoints {
     }).await?;
 ```
 
-Then, I ran another query with a simple filter that checks if the previous query result has a city name of "New York". Here is the code snippet:
+Then, I ran another query with a simple filter that checks if the previous query result has a city name of "London". Here is the code snippet:
 
 ```rust
 let search_result_filtered = client.search_points(&SearchPoints {
@@ -60,7 +60,7 @@ let search_result_filtered = client.search_points(&SearchPoints {
     }).await?;
 ```
 
-## Visualization
+## Screenshots
 ![db0](screenshots/db0.png)
 
 ![query](screenshots/query.png)
